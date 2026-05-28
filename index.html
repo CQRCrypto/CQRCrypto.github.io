@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!-- تعيين اللغة الافتراضية والاتجاه -->
+<html lang="en" dir="ltr">
+<head>
+    <!-- ================= Metadata & SEO 2026 ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags (Bilingual for Global Reach) -->
+    <title>CQRCrypto | Post-Quantum Cryptography & Quantum Identity | تشفير ما بعد الكم</title>
+    <meta name="title" content="CQRCrypto | Post-Quantum Cryptography & Quantum Identity | تشفير ما بعد الكم">
+    <meta name="description" content="Level 5 Post-Quantum Cryptography library (ML-DSA-87 & ML-KEM-1024). مكتبة CQRCrypto تقدم أقوى خوارزميات تشفير ما بعد الكم، والهوية الأمركزية الكمومية.">
+    <meta name="keywords" content="CQRCrypto, تشفير CQRCrypto, خوارزميات تشفير ما بعد الكم, التشفير الكمومي, الهوية الكمية, مقاومة الحواسيب الكمومية, الهوية الأمركزية الكمومية, هوية Web3 الكمومية, Post-Quantum Cryptography, Web3 Quantum Identity, ML-DSA-87, ML-KEM-1024">
+    <meta name="author" content="M-Z-Developer">
+    
+    <!-- Open Graph / Facebook / WhatsApp / Telegram (Balanced Bilingual) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/M-Z-Developer/CQRCrypto">
+    <meta property="og:title" content="CQRCrypto | Quantum Encryption | تشفير ما بعد الكم">
+    <meta property="og:description" content="Military-grade quantum-resistant algorithms for Web3. خوارزميات تشفير ما بعد الكم وهامش حماية متقدم ضد الحواسيب الكمومية.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:site_name" content="CQRCrypto Project">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ar_AR">
+
+    <!-- Twitter / X -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://github.com/M-Z-Developer/CQRCrypto">
+    <meta property="twitter:title" content="CQRCrypto | Quantum Encryption | تشفير ما بعد الكم">
+    <meta property="twitter:description" content="Level 5 Post-Quantum Cryptography (ML-DSA & ML-KEM). مكتبة CQRCrypto لتشفير ما بعد الكم.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- JSON-LD Schema Markup (AI Search Engine Optimization) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "CQRCrypto",
+      "alternateName": "تشفير CQRCrypto",
+      "programmingLanguage": "JavaScript",
+      "applicationCategory": "SecurityApplication",
+      "author": {
+        "@type": "Person",
+        "name": "M-Z-Developer",
+        "url": "https://github.com/M-Z-Developer"
+      },
+      "description": "Zero-dependency Level 5 Post-Quantum Cryptography library featuring ML-DSA-87 and ML-KEM-1024 for Web3 Quantum Identity, Decentralized Quantum Identity, and Air-Gapped secure messaging.",
+      "keywords": "CQRCrypto, Post-Quantum Cryptography, Quantum Encryption, ML-DSA-87, ML-KEM-1024, AES-256-GCM, تشفير ما بعد الكم, مقاومة الحواسيب الكمومية",
+      "url": "https://github.com/M-Z-Developer/CQRCrypto",
+      "codeRepository": "https://github.com/M-Z-Developer/CQRCrypto",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+
+    <!-- Google Fonts: Inter (EN) & Cairo (AR) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'Cairo', 'sans-serif'] },
+                    colors: {
+                        quantum: {
+                            light: '#4ade80', DEFAULT: '#22c55e', dark: '#16a34a', glow: '#22c55e80'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; overflow-x: hidden; scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(90deg, #4ade80, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .quantum-glow { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); transition: all 0.3s ease-in-out; }
+        .quantum-glow:hover { box-shadow: 0 0 35px rgba(34, 197, 94, 0.6); transform: translateY(-2px); }
+        .glass-card { background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        
+        /* Language Visibility Logic */
+        .lang-ar { display: none; }
+        html[dir="rtl"] .lang-en { display: none; }
+        html[dir="rtl"] .lang-ar { display: inline-block; font-family: 'Cairo', sans-serif; }
+        html[dir="rtl"] { font-family: 'Cairo', sans-serif; }
+        html[dir="rtl"] div.lang-ar, html[dir="rtl"] p.lang-ar, html[dir="rtl"] h2.lang-ar, html[dir="rtl"] h3.lang-ar { display: block; }
+        
+        .tag-chip {
+            background: rgba(30, 41, 59, 0.8); border: 1px solid rgba(74, 222, 128, 0.2); transition: all 0.2s;
+        }
+        .tag-chip:hover { border-color: #4ade80; background: rgba(34, 197, 94, 0.1); }
+    </style>
+</head>
+<body class="antialiased selection:bg-quantum selection:text-white flex flex-col min-h-screen relative">
+    
+    <!-- Background Effects -->
+    <div class="fixed inset-0 z-[-1] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01OS45IDB2NjAuMUgwVjAuMWg1OS45eiIgb3BhY2l0eT0iLjA1IiBmaWxsPSJub25lIiBzdHJva2U9IiM0YWRlODAiIHN0cm9rZS13aWR0aD0iMSIvPgo8L3N2Zz4=')] opacity-20"></div>
+    <div class="fixed top-[-20%] left-[-10%] w-[500px] h-[500px] bg-quantum rounded-full blur-[150px] opacity-20 z-[-1]"></div>
+    <div class="fixed bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-blue-600 rounded-full blur-[150px] opacity-20 z-[-1]"></div>
+
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-6 flex justify-between items-center relative z-10">
+        <div class="flex items-center gap-2 cursor-pointer">
+            <svg class="w-8 h-8 text-quantum" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"></path>
+            </svg>
+            <span class="text-2xl font-black tracking-tight text-white">CQR<span class="text-quantum">Crypto</span></span>
+        </div>
+        
+        <!-- Language Switcher -->
+        <button id="langToggle" class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 hover:border-quantum text-sm font-bold transition-colors flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+            <span class="lang-en">عربي</span>
+            <span class="lang-ar">English</span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="container mx-auto px-6 pt-12 pb-16 flex flex-col items-center justify-center relative z-10 text-center">
+        
+        <div class="inline-block px-4 py-1.5 rounded-full border border-quantum/30 bg-quantum/10 text-quantum font-semibold text-sm mb-6 backdrop-blur-sm animate-pulse">
+            <span lang="en" class="lang-en">NIST Level 5 Security Architecture</span>
+            <span lang="ar" class="lang-ar">هندسة أمنية معتمدة بأعلى مستوى (المستوى 5)</span>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight max-w-5xl">
+            <span lang="en" class="lang-en">The Future of <span class="gradient-text">Post-Quantum Cryptography</span></span>
+            <span lang="ar" class="lang-ar">مستقبل <span class="gradient-text">التشفير الكمومي</span> وحماية البيانات</span>
+        </h1>
+
+        <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl leading-relaxed">
+            <span lang="en" class="lang-en">Empowering the Web3 era with ultimate security. CQRCrypto delivers military-grade quantum-resistant algorithms, enabling Decentralized Quantum Identity and safeguarding against impending quantum computer threats.</span>
+            <span lang="ar" class="lang-ar">نُمكّن عصر Web3 بأقصى درجات الأمان. تقدم مكتبة <b>تشفير CQRCrypto</b> خوارزميات تشفير ما بعد الكم بدرجة عسكرية، مما يدعم <b>الهوية الأمركزية الكمومية</b> ويضمن <b>مقاومة الحواسيب الكمومية</b> بكفاءة وموثوقية عالية.</span>
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center w-full max-w-4xl">
+            <!-- Demo 1 -->
+            <a href="https://m-z-developer.github.io/CQRCrypto/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto quantum-glow bg-quantum text-slate-900 font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-2 text-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span lang="en" class="lang-en">Live DEMO 1 (Web App)</span>
+                <span lang="ar" class="lang-ar">المعاينة المباشرة 1 (تطبيق الويب)</span>
+            </a>
+
+            <!-- Demo 2 -->
+            <a href="https://mz.at.ua/CQRCrypto/index.html" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-2 text-lg transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                <span lang="en" class="lang-en">Live DEMO 2 (Alternative)</span>
+                <span lang="ar" class="lang-ar">المعاينة المباشرة 2 (بديل)</span>
+            </a>
+
+            <!-- Open Source -->
+            <a href="https://github.com/M-Z-Developer/CQRCrypto" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-white hover:bg-gray-200 text-slate-900 font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-2 text-lg transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+                <span lang="en" class="lang-en">View Source Code</span>
+                <span lang="ar" class="lang-ar">الكود المصدري (GitHub)</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-6 pb-24 relative z-10">
+        
+        <!-- Deep Dive Section: Beginner vs Expert -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+            <!-- For Beginners / Conceptual -->
+            <div class="glass-card p-8 rounded-2xl border-t-4 border-t-blue-500">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="p-3 bg-blue-500/20 rounded-lg text-blue-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </span>
+                    <h2 class="text-2xl font-bold">
+                        <span lang="en" class="lang-en">Why it Matters? (The Concept)</span>
+                        <span lang="ar" class="lang-ar">لماذا هذا مهم؟ (مفهوم مبسط)</span>
+                    </h2>
+                </div>
+                <p class="text-slate-300 leading-relaxed">
+                    <span lang="en" class="lang-en">Traditional encryption (like RSA) protects the internet today, but it is mathematically vulnerable to future Quantum Computers. <b>CQRCrypto</b> replaces these old locks with "Lattice-based cryptography"—complex multi-dimensional math puzzles that are <b>computationally infeasible</b> for even the most powerful future quantum computers to break. It secures your digital identity forever.</span>
+                    <span lang="ar" class="lang-ar">التشفير التقليدي (مثل RSA) يحمي الإنترنت اليوم، ولكنه ضعيف رياضياً أمام "الحواسيب الكمومية" القادمة. <b>CQRCrypto</b> تستبدل هذه الأقفال القديمة بـ "تشفير الشبكات" (Lattice-based)—وهي ألغاز رياضية معقدة متعددة الأبعاد، ويُعد فك شفرتها <b>أمراً غير مجدٍ حسابياً</b> (Computationally Infeasible) حتى لأقوى الحواسيب الكمومية المستقبلية. إنها درعك الواقي لهويتك الرقمية للأبد.</span>
+                </p>
+            </div>
+
+            <!-- For Experts / Technical -->
+            <div class="glass-card p-8 rounded-2xl border-t-4 border-t-quantum">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="p-3 bg-quantum/20 rounded-lg text-quantum">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                    </span>
+                    <h2 class="text-2xl font-bold">
+                        <span lang="en" class="lang-en">Under the Hood (For SecOps)</span>
+                        <span lang="ar" class="lang-ar">البنية التقنية (لخبراء الأمن السيبراني)</span>
+                    </h2>
+                </div>
+                <ul class="text-slate-300 space-y-3 font-mono text-sm" dir="ltr">
+                    <li class="flex items-start gap-2">
+                        <span class="text-quantum">▸</span>
+                        <span><b class="text-white">Signatures:</b> ML-DSA-87 (FIPS 204 Standard) - Highest Level 5.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-quantum">▸</span>
+                        <span><b class="text-white">Key Exchange:</b> ML-KEM-1024 (FIPS 203 Standard) - Encapsulation Mechanism.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-quantum">▸</span>
+                        <span><b class="text-white">Symmetric:</b> AES-256-GCM for payload encryption.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-quantum">▸</span>
+                        <span><b class="text-white">KDF:</b> PBKDF2-SHA512 (600,000 Iterations) for robust cold storage.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-quantum">▸</span>
+                        <span><b class="text-white">Format:</b> Combined CQR Binary Buffer with strict versioning.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold mb-2">
+                <span lang="en" class="lang-en">Engineered for Extreme Environments</span>
+                <span lang="ar" class="lang-ar">مُصمم للبيئات فائقة الحساسية</span>
+            </h2>
+            <div class="w-16 h-1 bg-quantum mx-auto rounded-full"></div>
+        </div>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+            <!-- Feature 1 -->
+            <div class="glass-card p-6 rounded-xl hover:-translate-y-1 transition-transform">
+                <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-4 text-quantum border border-slate-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-white">
+                    <span lang="en" class="lang-en">Zero Dependencies</span>
+                    <span lang="ar" class="lang-ar">بدون مكتبات خارجية (Zero Dependency)</span>
+                </h3>
+                <p class="text-sm text-slate-400">
+                    <span lang="en" class="lang-en">Pure JavaScript execution without NPM packages or WebAssembly. Eliminates supply chain attack vectors completely.</span>
+                    <span lang="ar" class="lang-ar">كود JavaScript نقي تماماً بدون حزم NPM أو WebAssembly، مما يقضي على هجمات سلاسل التوريد (Supply Chain Attacks) من الجذور.</span>
+                </p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="glass-card p-6 rounded-xl hover:-translate-y-1 transition-transform">
+                <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-4 text-quantum border border-slate-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-white">
+                    <span lang="en" class="lang-en">Air-Gapped Ready</span>
+                    <span lang="ar" class="lang-ar">العمل في الأجهزة المعزولة (Air-Gapped)</span>
+                </h3>
+                <p class="text-sm text-slate-400">
+                    <span lang="en" class="lang-en">Designed to run entirely offline in isolated environments, military radios, or secure satellite uplinks.</span>
+                    <span lang="ar" class="lang-ar">مُصمم للعمل بالكامل دون اتصال بالإنترنت في البيئات المعزولة، أجهزة الراديو العسكرية، أو الاتصالات الفضائية المشفرة.</span>
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="glass-card p-6 rounded-xl hover:-translate-y-1 transition-transform">
+                <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-4 text-quantum border border-slate-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-white">
+                    <span lang="en" class="lang-en">Web3 Quantum DID</span>
+                    <span lang="ar" class="lang-ar">هوية Web3 الأمركزية (DID)</span>
+                </h3>
+                <p class="text-sm text-slate-400">
+                    <span lang="en" class="lang-en">Native support for Decentralized Identifiers (DID) and verifiable credentials using quantum-safe signatures.</span>
+                    <span lang="ar" class="lang-ar">دعم برمجي مدمج لوثائق الهوية الأمركزية (DID) وإثبات النزاهة باستخدام توقيعات رقمية مضادة للكمبيوتر الكمي.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- SEO Tags Section -->
+        <section class="w-full max-w-5xl mx-auto text-center">
+            <h2 class="text-sm uppercase tracking-widest text-slate-500 font-bold mb-6 border-t border-slate-800 pt-8">
+                <span lang="en" class="lang-en">Indexed Topics & Terminology</span>
+                <span lang="ar" class="lang-ar">الكلمات الدلالية ومصطلحات البحث (SEO Tags)</span>
+            </h2>
+            <div class="flex flex-wrap justify-center gap-3 text-xs md:text-sm font-medium text-slate-300" id="tags-container">
+                <a href="https://github.com/M-Z-Developer/CQRCrypto" class="tag-chip px-4 py-2 rounded-full shadow-sm">#CQRCrypto</a>
+                <a href="https://github.com/M-Z-Developer/CQRCrypto" class="tag-chip px-4 py-2 rounded-full shadow-sm">#تشفير_CQRCrypto</a>
+                <a href="https://github.com/M-Z-Developer/CQRCrypto" class="tag-chip px-4 py-2 rounded-full shadow-sm">#خوارزميات_تشفير_ما_بعد_الكم</a>
+                <a href="https://github.com/M-Z-Developer/CQRCrypto" class="tag-chip px-4 py-2 rounded-full shadow-sm">#التشفير_الكمومي</a>
+                <a href="https://github.com/M-Z-Developer/CQRCrypto" class="tag-chip px-4 py-2 rounded-full shadow-sm">#الهوية_الكمية</a>
+                <a href="https://github.com/M-Z-Developer/CQRCrypto" class="tag-chip px-4 py-2 rounded-full shadow-sm">#مقاومة_الحواسيب_الكمومية</a>
+                <a href="https://github.com/M-Z-Developer/CQRCrypto" class="tag-chip px-4 py-2 rounded-full shadow-sm">#الهوية_الأمركزية_الكمومية</a>
+                <a href="https://github.com/M-Z-Developer/CQRCrypto" class="tag-chip px-4 py-2 rounded-full shadow-sm">#هوية_Web3_الكمومية</a>
+                <a href="https://github.com/M-Z-Developer/CQRCrypto" class="tag-chip px-4 py-2 rounded-full shadow-sm">#Post_Quantum_Cryptography</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-900/80 backdrop-blur-md relative z-10 py-8">
+        <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
+            <p>
+                &copy; <span id="year"></span> 
+                <span lang="en" class="lang-en">CQRCrypto by <a href="https://github.com/M-Z-Developer" class="text-quantum hover:underline">M-Z-Developer</a>. All rights reserved.</span>
+                <span lang="ar" class="lang-ar">جميع الحقوق محفوظة لمشروع CQRCrypto والمطور <a href="https://github.com/M-Z-Developer" class="text-quantum hover:underline">M-Z-Developer</a>.</span>
+            </p>
+            <p class="mt-2 text-xs">
+                <span lang="en" class="lang-en">Securing the future of Decentralized Quantum Identity and Military-Grade Encrypted Communication.</span>
+                <span lang="ar" class="lang-ar">نؤمن المستقبل عبر الهوية الأمركزية الكمومية والاتصالات المشفرة ذات الدرجة العسكرية.</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Auto-update Footer Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Language Toggle Logic (SEO Friendly & Accessibility)
+        const langToggleBtn = document.getElementById('langToggle');
+        const htmlElement = document.documentElement;
+
+        langToggleBtn.addEventListener('click', () => {
+            const currentDir = htmlElement.getAttribute('dir');
+            if (currentDir === 'ltr') {
+                htmlElement.setAttribute('dir', 'rtl');
+                htmlElement.setAttribute('lang', 'ar');
+            } else {
+                htmlElement.setAttribute('dir', 'ltr');
+                htmlElement.setAttribute('lang', 'en');
+            }
+        });
+
+        // Initialize based on browser language
+        window.addEventListener('DOMContentLoaded', () => {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('ar')) {
+                htmlElement.setAttribute('dir', 'rtl');
+                htmlElement.setAttribute('lang', 'ar');
+            }
+        });
+    </script>
+</body>
+</html>
